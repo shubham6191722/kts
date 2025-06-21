@@ -3,12 +3,12 @@
         <div class="container p-3">
             <div class="row justify-content-space-between align-items-center">
 
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-lg-5 col-md-7 col-12">
                     <div class="footer-widget text-xl-start text-lg-start text-md-center text-sm-center text-center">
                         <img src="{!! site_footer_logo !!}" class="img-footer" alt="" />
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-lg-5 col-md-7 col-12">
                     <div class="footer-widget">
                         <p class="m-0 text-xl-end text-lg-end text-md-center text-sm-center text-center">{!! footer_address !!}</p>
                         <div class="footer-add mt-3">

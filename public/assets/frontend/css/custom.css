@@ -305,8 +305,14 @@ input[type='number']:focus {
     z-index: 9;
 }
 .navbar-light .navbar-toggler {
+    /* color: rgb(255 255 255);
+    border-color: rgb(255 255 255 / 0%); */
     color: rgb(255 255 255);
     border-color: rgb(255 255 255 / 0%);
+    background: #6C37EE;
+    border-radius: 100%;
+    padding: 10px 12px;
+    border: 2px solid #fff;
 }
 
 .job-company-custom img{
@@ -423,9 +429,9 @@ input[type='number']:focus {
 
 @media only screen and (min-width : 992px) {
     nav.navbar.bootsnav.navbar-light.white.nav-tzanfer{
-		background-color: transparent;
+		background-color: #012749;
 		border-bottom: none;
-		position: absolute;
+		position: unset;
 		width: 100%;
 	}
     img.logo {
@@ -857,12 +863,9 @@ span.select2-container.select2-container--default.select2-container--open{
 }
 .job-position{
     padding: 0 15px;
-    text-align: left;
-    color: black;
 }
 .brows-job-position{
-    padding: 12px 15px 15px;
-	text-align: left;
+    padding: 20px 15px 15px;
 }
 
 .tz-banner-img{
@@ -912,11 +915,11 @@ span.select2-container.select2-container--default.select2-container--open{
     top: 0;
 } */
 .banner-img .brows-job-company-img.company-img-logo{
-    /* position: absolute;
+    position: absolute;
     bottom: -15px;
     left: 50%;
     margin: 0;
-    transform: translate(-50%, -10px); */
+    transform: translate(-50%, -10px);
 }
 
 .select2-drop-active{
@@ -924,8 +927,8 @@ span.select2-container.select2-container--default.select2-container--open{
 }
 
 .grid-view .brows-job-company-img.company-img-logo{
-    /* width: 150px;
-    border-radius: 0; */
+    width: 150px;
+    border-radius: 0;
 }
 
 .grid-view .brows-job-company-img.company-img-logo img {
