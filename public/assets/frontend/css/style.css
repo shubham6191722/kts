@@ -99,7 +99,9 @@ a:hover {
 
 section {
 	padding: 60px 0;
-	background: #fff
+	background: linear-gradient(0deg, #EFFEFA, #EFFEFA),
+	linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+
 }
 
 section.gray,
@@ -4312,13 +4314,16 @@ button.btn.btn-default.btn-xs.dropdown-toggle i {
 }
 
 .brows-job-position h3 {
-	font-size: 17px;
+	font-size: 22px;
 	padding: 0;
 	margin-bottom: 5px;
 	line-height: 1.4;
 	position: relative;
 	width: auto;
-	display: inline-block
+	display: inline-block;
+	text-align: left;
+    color: #012749;
+    font-weight: bold;
 }
 
 .brows-job-position .jb-approved:before {
@@ -4342,8 +4347,8 @@ span.job-num {
 	padding: 5px 10px;
 	border-radius: 4px;
 	text-transform: capitalize;
-	color: #8da2b3;
-	background: #f3f6fb
+	color: black;
+	background: #7777771A;
 }
 
 .brows-job-position p span {
@@ -7044,12 +7049,16 @@ button.btn.btn-login {
 
 .grid-view .brows-job-type span {
 	position: absolute;
-	padding: 4px 15px;
-	top: 10px;
-	right: 0;
-	line-height: 1.4;
-	font-size: 12px;
-	border-radius: 2px 0 0 2px
+    padding: 4px 9px 3px 9px;
+    top: 24px;
+    right: 24px;
+    line-height: 1.4;
+    font-size: 12px;
+    border-radius: 2px 0 0 2px;
+    border-radius: 6px;
+    background: #CAFDF3;
+    color: #012749;
+    font-weight: 600;
 }
 
 .grid-view.brows-job-list:hover,
@@ -7058,15 +7067,19 @@ button.btn.btn-login {
 }
 
 .grid-view .brows-job-company-img {
-	width: 80px;
+	width: 85px;
 	margin: 10px auto;
-	height: 80px;
+	height: 85px;
 	display: flex;
 	border: 1px solid #e4e4e4;
 	background: #fff;
 	align-items: center;
 	border-radius: 50%;
-	line-height: 80px
+	line-height: 80px;	
+	position: absolute;
+	bottom: -30px;
+	left: 30px;
+	border-radius: 8px !important;
 }
 
 .grid-view .brows-job-company-img img {
@@ -7086,7 +7099,7 @@ button.btn.btn-login {
 }
 
 .brows-job-position {
-	padding: 0 15px 15px
+	padding: 0 15px 15px;
 }
 
 .item-click .brows-job-position {
@@ -12130,6 +12143,10 @@ a.cl-box.pink {
 		min-width: 155px;
 		max-width: 155px
 	}
+	/* .brows-job-company-img{
+		width: 50px;
+    	height: 50px;
+	} */
 }
 
 @media only screen and (max-width: 1023px) and (min-width: 993px) {
@@ -12415,6 +12432,23 @@ a.cl-box.pink {
 	.footer-widget {
 		padding: 1em;
 		padding: 0;
+	}
+}
+
+@media screen and (max-width: 580px) {
+    .custom-button {
+        display: block !important;
+        margin: 0 auto 16px;
+    }
+
+    .view-all-button-main{
+        align-items: center !important;
+		flex-direction: column !important;
+		align-items: flex-start !important;
+		gap: 30px !important;
+    }
+	.view-all-button-main>p{
+		width: 100% !important;
 	}
 }
 
@@ -13034,5 +13068,9 @@ a.cl-box.pink {
 		-webkit-align-items: center;
 		display: flex;
 		align-items: center
+	}
+	.brows-job-company-img{
+		/* width: 50px;
+    	height: 50px; */
 	}
 }

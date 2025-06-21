@@ -857,9 +857,12 @@ span.select2-container.select2-container--default.select2-container--open{
 }
 .job-position{
     padding: 0 15px;
+    text-align: left;
+    color: black;
 }
 .brows-job-position{
-    padding: 20px 15px 15px;
+    padding: 12px 15px 15px;
+	text-align: left;
 }
 
 .tz-banner-img{
@@ -909,11 +912,11 @@ span.select2-container.select2-container--default.select2-container--open{
     top: 0;
 } */
 .banner-img .brows-job-company-img.company-img-logo{
-    position: absolute;
+    /* position: absolute;
     bottom: -15px;
     left: 50%;
     margin: 0;
-    transform: translate(-50%, -10px);
+    transform: translate(-50%, -10px); */
 }
 
 .select2-drop-active{
@@ -921,8 +924,8 @@ span.select2-container.select2-container--default.select2-container--open{
 }
 
 .grid-view .brows-job-company-img.company-img-logo{
-    width: 150px;
-    border-radius: 0;
+    /* width: 150px;
+    border-radius: 0; */
 }
 
 .grid-view .brows-job-company-img.company-img-logo img {
