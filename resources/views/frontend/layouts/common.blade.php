@@ -80,7 +80,7 @@
 
     @else
 
-        <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" role="dialog"  aria-hidden="true">
+        {{-- <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" role="dialog"  aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content new-logwrap new-logwrap-custom w-100 new-logwrap-login new-logwrap-l-j-r">
                     <div class="modal-header custom-modal-header-close-btn position-relative justify-content-center">
@@ -157,7 +157,83 @@
                     </div>
                 </div>
             </div>
+        </div> --}}
+
+        <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" role="dialog">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content login-modal-ui">
+      <div class="modal-header justify-content-between align-items-center">
+        <h4 class="login-title">Login</h4>
+        <button type="button" class="btn-close" id="applyjob_close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body d-md-flex justify-content-between align-items-start gap-4">
+        <form id="login_form" method="POST" enctype="multipart/form-data" class="login-form w-100">
+          @csrf
+          <div class="form-group mb-3">
+            <label>Email</label>
+            <div class="input-with-icon">
+              <input type="email" class="form-control" placeholder="Enter your email" name="c_email" id="l_email" required autocomplete="off">
+              <i class="ti-email"></i>
+            </div>
+          </div>
+
+          <div class="form-group mb-2">
+            <label>Password</label>
+            <div class="input-with-icon">
+              <input type="password" class="form-control" placeholder="Enter your password" name="c_password" id="l_password" required autocomplete="off">
+              <input type="hidden" name="job_id" id="job_id" value="@if(isset($id) && !empty($id)){!! $id !!}@endif">
+              <i class="ti-lock"></i>
+            </div>
+          </div>
+
+          <div class="text-end mb-3">
+            <a class="theme-cl" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#forgot_password" data-bs-dismiss="modal">Forgotten Password?</a>
+          </div>
+
+          <div class="form-groups mb-3">
+            <input type="hidden" name="page" value="back">
+            <button type="button" class="btn btn-login w-100" id="login_submit_otp">Login</button>
+            <button type="button" class="btn btn-login w-100" id="login_submit" style="display: none;">Login</button>
+          </div>
+
+          <div class="error-message error_message"></div>
+
+          <div id="login_otp" class="otp-section mt-3">
+            <p>We have sent a 6 digit one time passcode to your mobile phone</p>
+            <div class="form-group mb-3">
+              <label>One time passcode *</label>
+              <div class="input-with-icon">
+                <input type="number" class="form-control" placeholder="OTP" name="otp" id="otp_login" maxlength="6"
+                  data-parsley-required-message="Please Enter Your OTP"
+                  data-parsley-remote-validator="otpRegister"
+                  data-parsley-multiple-of="6"
+                  data-parsley-length="[6,6]"
+                  oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  autocomplete="off">
+                <i class="ti-lock"></i>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span>Time left <span id="logintimer"></span></span>
+              <button type="button" onclick="loginReSendOtp()" class="resendOtp" id="login_resendOtp" disabled>Resend OTP</button>
+            </div>
+          </div>
+        </form>
+
+        <div class="login-image d-none d-md-block">
+          <img src="{{url('')}}/uploads/site_setting/Logincard.png" alt="Login Illustration" />
         </div>
+      </div>
+
+      <div class="modal-footer justify-content-center">
+        <p class="mb-0">Don't have an account? <a class="theme-cl" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#register" data-bs-dismiss="modal" id="register_btn_1">Register</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
 
         <div class="modal fade bd-example-modal-lg" id="register" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" role="dialog"  aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
