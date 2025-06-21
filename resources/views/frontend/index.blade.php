@@ -299,6 +299,7 @@
                             }
                             if(isset($client_data->cover_image) && !empty($client_data->cover_image)){
                                 $company_cover_img = url('uploads').'/client_profile/'.$client_data->cover_image;
+                                
                             }
                         @endphp
                         <div class="col-xl-4 col-md-6 col-12">
